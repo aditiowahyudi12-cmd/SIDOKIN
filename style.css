@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.2);
+    z-index: -1;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(to right, #0f4281, #1e6bc7);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title h1 {
+    font-size: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* TOP FORM */
+.top-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.field label {
+    font-size: 14px;
+}
+
+.field input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+}
+
+.judul {
+    grid-column: 1 / 3;
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* ROW */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.row span {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+}
+
+.row input {
+    width: 120px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    flex-shrink: 0;
+}
+
+/* COLUMN */
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* UPLOAD */
+.upload-box {
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.upload-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.upload-box input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.preview {
+    width: 100%;
+    height: 220px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.preview p {
+    color: #777;
+}
+
+.batalgambar {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: #f00404;
+}
+
+/* BUTTON */
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-kembali {
+    background: #f00404;
+}
+
+.btn-simpan {
+    background: #08bb53;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-form {
+        grid-template-columns: 1fr;
+    }
+
+    .judul {
+        grid-column: 1;
+    }
+}

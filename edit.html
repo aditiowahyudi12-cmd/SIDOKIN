@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Data</title>
+
+    <link rel="stylesheet" href="edit.css">
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+    <div class="logo">
+        <img src="logo.jpg" class="logo-img">
+    </div>
+
+    <div class="title">
+        <h1>SIDOKIN</h1>
+        <p>Sistem Informasi Dokumen Keimigrasian</p>
+    </div>
+
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <!-- FORM -->
+    <div class="top-form">
+
+        <div class="field tanggal">
+            <label>Tanggal</label>
+            <input type="date" id="TANGGAL">
+        </div>
+
+        <div class="field kantor">
+            <label>Lokasi Kantor</label>
+            <input type="text" id="LOKASIKANTOR">
+        </div>
+
+        <div class="field judul">
+            <label>Judul Laporan</label>
+            <input type="text" id="JUDUL">
+        </div>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="form-grid">
+
+        <!-- KIRI -->
+        <div class="col">
+
+            <div class="row"><span>Perpanjangan ITK ( Izin Tinggal Kunjungan )</span><input type="number" id="ITK" placeholder="Ketik disini"></div>
+            <div class="row"><span>Perpanjangan VOA ( Visa on Arrival )</span><input type="number" id="VOA"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Perpanjangan ITAS 6 Bulan</span><input type="number" id="ITAS6"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Perpanjangan ITAS 1 Tahun</span><input type="number"  id="ITAS1" placeholder="Ketik disini"></div>
+            <div class="row"><span>Perpanjangan ITAS 2 Tahun</span><input type="number" id="ITAS2"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Alih Status ITK ke ITAS</span><input type="number" id="ITKITAS"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Alih Status ITAS ke ITAP</span><input type="number" id="ITASITAP"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Perpanjangan ITAP</span><input type="number"  id="ITAP" placeholder="Ketik disini"></div>
+            <div class="row"><span>Affidavit</span><input type="number" id="AFFIDAVIT" placeholder="Ketik disini"></div>
+            <div class="row"><span>MERP 6 Bulan</span><input type="number" id="MERP6"  placeholder="Ketik disini"></div>
+            <div class="row"><span>MERP 1 Tahun</span><input type="number" id="MERP1"  placeholder="Ketik disini"></div>
+            <div class="row"><span>MERP 2 Tahun</span><input type="number" id="MERP2"  placeholder="Ketik disini"></div>
+            <div class="row"><span>MERP Unlimited</span><input type="number" id="MERPUNLI" placeholder="Ketik disini"></div>
+            <div class="row"><span>Pelaporan ITAP</span><input type="number"  id="PLITAP"  placeholder="Ketik disini"></div>
+            <div class="row"><span>SKIM</span><input type="number" id="SKIM" placeholder="Ketik disini"></div>
+            <div class="row"><span>Pendaftaran ABG</span><input type="number" id="PABG"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Alih Penjamin ITAP</span><input type="number" id="ALIHPENJITAP" placeholder="Ketik disini"></div>
+            <div class="row"><span>ERP Tidak Kembali</span><input type="number"  id="ERP"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Perubahan Alamat</span><input type="number"  id="PALAMAT"  placeholder="Ketik disini"></div>
+
+        </div>
+
+        <!-- KANAN -->
+        <div class="colkanan">
+
+            <div class="row"><span>EPO</span><input type="number"  id="EPO"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Mutasi Perubahan Data Paspor</span><input type="number"  id="MUPASPOR"  placeholder="Ketik disini"></div>
+            <div class="row"><span>M-Paspor</span><input type="number"  id="MPASPOR" placeholder="Ketik disini"></div>
+            <div class="row"><span>Walk In</span><input type="number"  id="WALKIN"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Percepatan</span><input type="number"  id="PERCEPATAN" placeholder="Ketik disini"></div>
+            <div class="row"><span>Pengambilan Foto</span><input type="number"  id="PFOTO"  placeholder="Ketik disini"></div>
+            <div class="row"><span>Konsultasi</span><input type="number" id="KONSUL" placeholder="Ketik disini"></div>
+
+            <div class="upload-box">
+            <label>Upload Gambar</label>
+
+            <input type="file" id="upload" accept="image/*">
+
+            <div class="preview">
+                <img id="previewImg">
+                <p id="textPreview">Belum ada gambar</p>
+            </div>
+            <button class="batalgambar" id="btnBatal">Batal</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- BUTTON -->
+    <div class="footer">
+
+        <button class="btn-kembali" onclick="window.location.href='index.html'">
+            Kembali
+        </button>
+
+        <button
+            class="btn-simpan"
+            id="UPDATE"
+        >
+            Update
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

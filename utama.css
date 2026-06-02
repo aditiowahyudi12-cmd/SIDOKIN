@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.2);
+    z-index: -1;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(to right, #0f4281, #1e6bc7);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title h1 {
+    font-size: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    
+    
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border-radius: 30px;
+    width: 83%;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.searching{
+   background: #1dbf73;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.icon {
+    color: green;
+}
+
+/* BUTTON TAMBAH */
+.btn-tambah {
+    background: #1dbf73;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* TABLE BOX */
+.table-box {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* HEADER TABLE */
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.table-header span:nth-child(2) {
+    margin-left: 100px; /* geser ke kanan */
+}
+
+/* ROW */
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr auto;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* TEXT */
+.tgl {
+    font-size: 12px;
+}
+
+.judul {
+    font-size: 12px;
+}
+
+.lokasi {
+    font-size: 12px;
+}
+
+
+/* ACTION BUTTON */
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.actions button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-view {
+    background: #1e5fae;
+}
+
+.btn-edit {
+    background: #1dbf73;
+}
+
+.btn-hapus {
+    background: #ff3b3b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
